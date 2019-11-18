@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+  db:
+    image: postgres:12.0-alpine
+    restart: always
+    environment:
+        - POSTGRES_PASSWORD=12345
+        - POSTGRES_USER=user
+        - POSTGRES_DB=db
+    volumes:
+        - ./data:/var/lib/postgresql/data
