@@ -9,5 +9,4 @@ services:
     environment:
         - POSTGRES_PASSWORD=1
         - POSTGRES_USER=ddn
-        - PGDATA=/var/lib/postgresql/data
         - POSTGRES_DB=db
