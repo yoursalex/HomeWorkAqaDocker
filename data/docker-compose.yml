@@ -2,10 +2,12 @@ version: '3.2'
 services:
   db:
     image: postgres:12.0-alpine
-    restart: always
-    environment:
-        - POSTGRES_PASSWORD=12345
-        - POSTGRES_USER=user
-        - POSTGRES_DB=db
+    ports: 
+        - '5432:5432'
     volumes:
         - ./data:/var/lib/postgresql/data
+    environment:
+        - POSTGRES_PASSWORD=1
+        - POSTGRES_USER=ddn
+        - PGDATA=/var/lib/postgresql/data
+        - POSTGRES_DB=db
